@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script>
+            let meuBotao = document.querySelector('button');
+            let meuCabecalho = document.querySelector('h1');
+            
+            function defineNomeUsuario() {
+              let meuNome = prompt('Por favor, digite seu nome.');
+              if(!meuNome || meuNome === null) {
+                defineNomeUsuario();
+              } else {
+                localStorage.setItem('nome', meuNome);
+                hello.innerHTML = ', ' + meuNome;
+              }
+            }
+            
+            meuBotao.onclick = function() { defineNomeUsuario();
+            }
+        </script>
+        <title>CS50 PSET8</title>
+        <header><h2>This is my exemple page!</h2></header>
+        <button class="btn btn-light" onclick="defineNomeUsuario()">Introduce yourself</button>
+        <hr/>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        
+        <main>
+        <p><h4>Hello<spam id="hello"></spam>! My name is Ricardo. Thank you to visit my website</h4></p>
+        <p>Let me show you three things about me:</p>
+
+        
+        <ul>
+            <li><a href="games.html">Favorit Games</a></li>
+            <li><a href="books.html">Favorit Books</a></li>
+            <li><a href="places.html">Favorit Places</a></li>
+        </ul>
+            
+        </main>
+        <div >
+            <img id="img" src="https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/05/Imagem-Bandeira-do-Brasil-PNG-1536x1531.png" alt="cdn-0.imagensemoldes.com.br">
+        </div>    
+        
+        <footer>
+            <p>To know more about my country, <a href="https://en.wikipedia.org/wiki/Brazil">click here.</a></p>
+            <small><mark>Ricardo Cadete Copyright©</mark></small>
+        </footer>
+        
+    </body>
+</html>
